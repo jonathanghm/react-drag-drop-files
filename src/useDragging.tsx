@@ -32,9 +32,7 @@ export default function useDragging({
     ev.preventDefault();
     ev.stopPropagation();
     draggingCount++;
-    if (ev.dataTransfer.items && ev.dataTransfer.items.length !== 0) {
-      setDragging(true);
-    }
+    setDragging(true);
   }, []);
   const handleDragOut = useCallback((ev) => {
     ev.preventDefault();
